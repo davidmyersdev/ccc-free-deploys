@@ -1,3 +1,5 @@
+_This resource is still in progress!_
+
 # How to deploy your apps for free <!-- omit in toc -->
 
 A resource for the Columbus Code & Coffee presentation.
@@ -6,9 +8,16 @@ A resource for the Columbus Code & Coffee presentation.
 
 - [What are the different ways to deploy a web app?](#what-are-the-different-ways-to-deploy-a-web-app)
   - [Traditional "always on" applications](#traditional-always-on-applications)
+    - [Traditional hosting providers](#traditional-hosting-providers)
   - [What about "serverless" apps?](#what-about-serverless-apps)
   - [Deploying to the edge](#deploying-to-the-edge)
   - [Static sites](#static-sites)
+- [What options do I have to host my database?](#what-options-do-i-have-to-host-my-database)
+- [Alternatives to Platform as a Service (PaaS)](#alternatives-to-platform-as-a-service-paas)
+  - [Self-hosted PaaS options (deploy to a VPS)](#self-hosted-paas-options-deploy-to-a-vps)
+  - [VPS options](#vps-options)
+- [Other considerations](#other-considerations)
+- [Other resources](#other-resources)
 
 ## What are the different ways to deploy a web app?
 
@@ -20,11 +29,15 @@ A resource for the Columbus Code & Coffee presentation.
 - More flexible
 - More control
 - Least barrier to entry
-- Examples:
-  - [Railway](https://railway.app/)
-  - [Fly](https://fly.io/)
-  - [Render](https://render.com/)
-  - [Glitch](https://glitch.com/)
+
+#### Traditional hosting providers
+
+| Provider                        | Pricing                                                                               | Requires Credit Card? |
+| ------------------------------- | ------------------------------------------------------------------------------------- | --------------------- |
+| [Railway](https://railway.app/) | [free](https://railway.app/pricing) ($5/m, $5/m credit)                               | Yes                   |
+| [Fly](https://fly.io/)          | [free](https://fly.io/docs/about/pricing/)                                            | Yes                   |
+| [Render](https://render.com/)   | [free](https://render.com/pricing) ([limited per user](https://docs.render.com/free)) | No                    |
+| [Glitch](https://glitch.com/)   | [free](https://glitch.com/pricing) (apps sleep after 5 minutes)                       | No                    |
 
 ### What about "serverless" apps?
 
@@ -65,3 +78,52 @@ A resource for the Columbus Code & Coffee presentation.
   - [Vercel](https://vercel.com/)
   - [Netlify](https://www.netlify.com/)
   - [Cloudflare Pages](https://pages.cloudflare.com/)
+
+## What options do I have to host my database?
+
+Apps often need a database to persist non-static data. Many hosts offer a database as a service, but there are also options for hosting your database separately from your app.
+
+- [Supabase](https://supabase.com/)
+- [Firebase Firestore](https://firebase.google.com/docs/firestore/quickstart)
+- [Cloudflare D1](https://developers.cloudflare.com/d1/)
+
+## Alternatives to Platform as a Service (PaaS)
+
+### Self-hosted PaaS options (deploy to a VPS)
+
+- [Coolify](https://coolify.io/)
+- [Dokku](https://dokku.com/)
+
+### VPS options
+
+- [Digital Ocean](https://www.digitalocean.com/)
+- ???
+
+## Other considerations
+
+- Authentication & Authorization
+  - Auth0
+  - Clerk
+  - Firebase
+  - Supabase
+- CI/CD
+  - GitHub Actions
+  - GitLab CI
+  - CircleCI
+- Monitoring
+  - UptimeRobot
+  - Pulsetic
+- Logging
+  - Datadog
+  - Sumologic
+- Error tracking
+  - Sentry
+  - AppSignal
+  - BugSnag
+- Runtime testing
+  - Playwright
+  - Cypress
+
+## Other resources
+
+- [Syntax: Own your own PaaS](https://syntax.fm/show/730/own-your-own-paas)
